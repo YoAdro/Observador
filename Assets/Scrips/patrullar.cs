@@ -31,16 +31,17 @@ public class patrullar : MonoBehaviour
         }
     }
 
-        private void Girar()
+    private void Girar()
+    {
+        if (transform.position.x < puntosMovimiento[SiguientePaso].position.x)
         {
-            if (transform.position.x < puntosMovimiento[SiguientePaso].position.x)
-            {
-                spriteRenderer.flipX = true;
-            }
-            else
-            {
-                spriteRenderer.flipX = false;
-            }
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
         }
     }
+
+}
 
